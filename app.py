@@ -2,12 +2,12 @@
 from flask import Flask
 from flask import render_template,request
 import textblob
+import os
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyAVahZgKkaXbwgq45d0dafLfckSGsKQ7s8")
-model = genai.GenerativeModel("gemini-1.5-flash")
 
-#import os
-#api = os.getenv("makersuite")
+api = os.getenv("makersuite")
+genai.configure(api_key = api)
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__)
 
