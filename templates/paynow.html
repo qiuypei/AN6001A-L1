@@ -11,6 +11,11 @@
         <input type="number" id="amount" placeholder="Enter amount to transfer">
         <button class="btn" onclick="transfer()">Transfer</button>
         <button class="btn" onclick="transaction()">Transaction</button>
+        
+        <form action="/main" method="post">
+            <p><input type="submit" value="Main"></p>
+        </form>
+
         <p id=“view_payer"></p>
         <p id=“view_payee"></p>
         <p id=“view_amount"></p>
